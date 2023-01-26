@@ -89,7 +89,7 @@ brew install alfred -q
 brew install exa -q
 brew install hstr -q
 brew install htop -q
-brew install httpie -q
+brew install --cask homebrew/cask/httpie -q
 brew install kubernetes-cli -q
 brew install krew -q
 brew install infrahq/tap/infra -q
