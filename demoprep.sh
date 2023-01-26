@@ -115,6 +115,10 @@ if [ ! -f VMware.dmg ]; then
     wget https://www.dropbox.com/s/e6r7awhvai3nexx/VMware-Fusion-e.x.p-20486664_universal.dmg?dl=1 -O VMware.dmg
 fi
 
+wget https://github.com/lambdan/imageviewer5/releases/download/1.6.1/imageviewer5.app.zip
+unzip imageviewer5.app.zip 
+mv imageviewer5.app /Applications
+
 if [ -d "/Users/demo/demoprep/client" ]; then
   rm -rf /Users/demo/demoprep/client
 fi

@@ -1,0 +1,3 @@
+function pics() {
+  open -a /Applications/ImageViewer5.app /Users/demo/demoprep/client/pics
+}
