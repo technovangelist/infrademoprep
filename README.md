@@ -1,2 +1,5 @@
-# infrademoprep
-bash -c "$(curl -L github.com/technovangelist)
+# Infrademoprep
+
+```bash
+bash -c "$(curl https://raw.githubusercontent.com/technovangelist/infrademoprep/main/demoprep.sh)
+```

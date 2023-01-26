@@ -66,6 +66,7 @@ fi
 
 brew update --force
 brew install git
+brew install wget
 brew install universal-ctags
 brew install git-extras
 brew install legit
@@ -93,7 +94,6 @@ brew install httpie
 brew install kubernetes-cli
 brew install krew
 brew install infrahq/tap/infra
-brew install --cask vmware-fusion
 brew install --cask visual-studio-code
 brew install derailed/k9s/k9s
 kubectl krew install access-matrix
@@ -106,7 +106,8 @@ brew install font-jetbrains-mono-nerd-font
 fancy_echo "Setting up Vim"
 brew install neovim
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
-nvim
+
+wget https://www.dropbox.com/s/e6r7awhvai3nexx/VMware-Fusion-e.x.p-20486664_universal.dmg?dl=1 -O VMware.dmg
 
 
 
@@ -270,5 +271,5 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
-
+open VMware.dmg
 killall Finder
