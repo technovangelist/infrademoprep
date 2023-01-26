@@ -1,4 +1,4 @@
-# shellcheck shell=zsh
+#!/bin/zsh
 function k() {
     kubectl "$@"
 }
