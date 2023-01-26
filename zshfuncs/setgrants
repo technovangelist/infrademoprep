@@ -1,6 +1,6 @@
 function setgrants() {
   currentdir=$(pwd)
-  cd ~/.bin
+  cd /Users/demo/demoprep/client
   ./setgrants.sh
   cd "$currentdir"
 }
