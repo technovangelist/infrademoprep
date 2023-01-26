@@ -110,7 +110,25 @@ git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 
 wget https://www.dropbox.com/s/e6r7awhvai3nexx/VMware-Fusion-e.x.p-20486664_universal.dmg?dl=1 -O VMware.dmg
 
-dockutil --remove ''
+dockutil --remove 'Launchpad'
+dockutil --remove 'Messages'
+dockutil --remove 'Mail'
+dockutil --remove 'Facetime'
+dockutil --remove 'Contacts'
+dockutil --remove 'Reminders'
+dockutil --remove 'TV'
+dockutil --remove 'Music'
+dockutil --remove 'Podcasts'
+dockutil --remove 'News'
+dockutil --remove 'Keynote'
+dockutil --remove 'Pages'
+dockutil --remove 'App Store'
+dockutil --remove 'Terminal'
+dockutil --remove 'Reminders'
+dockutil --remove 'Reminders'
+dockutil --remove 'Reminders'
+dockutil --remove 'Reminders'
+
 
 #Disabling system-wide resume
 defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
