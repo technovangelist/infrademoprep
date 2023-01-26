@@ -96,6 +96,7 @@ brew install infrahq/tap/infra -q
 brew install --cask visual-studio-code -q
 brew install derailed/k9s/k9s -q
 brew install --cask hpedrorodrigues/tools/dockutil -q
+brew tap charmbracelet/tap && brew install charmbracelet/tap/skate -q
 kubectl krew install access-matrix 
 kubectl krew install ctx 
 
@@ -111,6 +112,23 @@ git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 if [ ! -f VMware.dmg ]; then
     wget https://www.dropbox.com/s/e6r7awhvai3nexx/VMware-Fusion-e.x.p-20486664_universal.dmg?dl=1 -O VMware.dmg
 fi
+
+if [ ! -d "/Users/demo/demoprep/saas" ]; then
+  git clone https://github.com/infrahq/ConferenceDemos.git ~/demoprep/saas
+else
+  cd /Users/demo/demoprep/saas
+  git pull
+  cd /Users/demo
+fi
+
+if [ ! -d "/Users/demo/demoprep/client" ]; then
+  git clone https://github.com/technovangelist/infrademoprep.git ~/demoprep/client
+else
+  cd /Users/demo/demoprep/client
+  git pull
+  cd /Users/demo
+fi
+
 
 CURRENTDOCK="$(dockutil -L | cut -f1)"
 
