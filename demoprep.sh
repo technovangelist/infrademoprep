@@ -64,47 +64,47 @@ fi
 
 
 brew update --force
-brew install git
-brew install wget
-brew install universal-ctags
-brew install git-extras
-brew install legit
-brew install openssl
-brew install the_silver_searcher
-brew install watchman
-brew install iterm2
-brew install gh
-brew install imagemagick
-brew install lnav
-brew install m-cli
-brew install helix
-brew install libyaml
-brew install coreutils
-brew install yarn
-brew install tree
-brew install wget
-brew install trash
-brew install node
-brew install alfred
-brew install exa
-brew install hstr
-brew install htop
-brew install httpie
-brew install kubernetes-cli
-brew install krew
-brew install infrahq/tap/infra
-brew install --cask visual-studio-code
-brew install derailed/k9s/k9s
-brew install --cask hpedrorodrigues/tools/dockutil
-kubectl krew install access-matrix
-kubectl krew install ctx
+brew install git -q
+brew install wget -q
+brew install universal-ctags -q
+brew install git-extras -q
+brew install legit -q
+brew install openssl -q
+brew install the_silver_searcher -q
+brew install watchman -q
+brew install iterm2 -q
+brew install gh -q
+brew install imagemagick -q
+brew install lnav -q
+brew install m-cli -q
+brew install helix -q
+brew install libyaml -q
+brew install coreutils -q
+brew install yarn -q
+brew install tree -q
+brew install wget -q
+brew install trash -q
+brew install node -q
+brew install alfred -q
+brew install exa -q
+brew install hstr -q
+brew install htop -q
+brew install httpie -q
+brew install kubernetes-cli -q
+brew install krew -q
+brew install infrahq/tap/infra -q
+brew install --cask visual-studio-code -q
+brew install derailed/k9s/k9s -q
+brew install --cask hpedrorodrigues/tools/dockutil -q
+kubectl krew install access-matrix -q
+kubectl krew install ctx -q
 
-brew tap homebrew/cask-fonts
-brew install font-inconsolata
-brew install font-jetbrains-mono-nerd-font
+brew tap homebrew/cask-fonts -q
+brew install font-inconsolata -q
+brew install font-jetbrains-mono-nerd-font -q
 
 fancy_echo "Setting up Vim"
-brew install neovim
+brew install neovim -q
 rm -rf ~/.config/nvim
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 
@@ -114,53 +114,55 @@ fi
 
 CURRENTDOCK="$(dockutil -L | cut -f1)"
 
-case $CURRENTDOCK in
-  *Launchpad*)
+for item in $CURRENTDOCK
+do
+
+case $item in
+  Launchpad)
     dockutil --remove 'Launchpad'
   ;;
-
-  *Messages*)
+  Messages)
     dockutil --remove 'Messages'
   ;;
-  *Mail*)
+  Mail)
     dockutil --remove 'Mail'
   ;;
-  *FaceTime*)
+  FaceTime)
     dockutil --remove 'FaceTime'
   ;;
-  *Contacts*)
+  Contacts)
     dockutil --remove 'Contacts'
   ;;
-  *Reminders*)
+  Reminders)
     dockutil --remove 'Reminders'
   ;;
-  *TV*)
+  TV)
     dockutil --remove 'TV'
   ;;
-  *Music*)
+  Music)
     dockutil --remove 'Music'
   ;;
-  *Podcasts*)
+  Podcasts)
     dockutil --remove 'Podcasts'
   ;;
-  *News*)
+  News)
     dockutil --remove 'News'
   ;;
-  *Keynote*)
+  Keynote)
     dockutil --remove 'Keynote'
   ;;
-  *Pages*)
+  Pages)
     dockutil --remove 'Pages'
   ;;
-  *"App Store"*)
+  "App Store")
     dockutil --remove 'App Store'
   ;;
-  *Terminal*)
+  Terminal)
     dockutil --remove 'Terminal'
   ;;
 esac
 
-
+done
 
 #Disabling system-wide resume
 defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
