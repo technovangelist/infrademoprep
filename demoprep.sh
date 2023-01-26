@@ -126,7 +126,7 @@ else
 fi
 
 append_to_zshrc fpath+=~/demoprep/client/zshfuncs
-append_to_zshrc autoload -U ~/demoprep/client/zshfuncs/*
+append_to_zshrc 'autoload -U ~/demoprep/client/zshfuncs/*'
 
 
 
