@@ -63,7 +63,6 @@ if ! command -v brew >/dev/null; then
 fi
 
 
-
 brew update --force
 brew install git
 brew install wget
