@@ -113,7 +113,7 @@ wget https://www.dropbox.com/s/e6r7awhvai3nexx/VMware-Fusion-e.x.p-20486664_univ
 dockutil --remove 'Launchpad'
 dockutil --remove 'Messages'
 dockutil --remove 'Mail'
-dockutil --remove 'Facetime'
+dockutil --remove 'FaceTime'
 dockutil --remove 'Contacts'
 dockutil --remove 'Reminders'
 dockutil --remove 'TV'
@@ -124,10 +124,7 @@ dockutil --remove 'Keynote'
 dockutil --remove 'Pages'
 dockutil --remove 'App Store'
 dockutil --remove 'Terminal'
-dockutil --remove 'Reminders'
-dockutil --remove 'Reminders'
-dockutil --remove 'Reminders'
-dockutil --remove 'Reminders'
+
 
 
 #Disabling system-wide resume
