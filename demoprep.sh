@@ -104,6 +104,7 @@ brew install font-jetbrains-mono-nerd-font
 
 fancy_echo "Setting up Vim"
 brew install neovim
+rmdir ~/.config/nvim
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 
 wget https://www.dropbox.com/s/e6r7awhvai3nexx/VMware-Fusion-e.x.p-20486664_universal.dmg?dl=1 -O VMware.dmg
