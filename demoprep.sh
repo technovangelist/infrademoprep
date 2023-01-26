@@ -1,11 +1,35 @@
 #! /usr/bin/env bash
 
-# Welcome to the thoughtbot laptop script!
-# Be prepared to turn your laptop (or desktop, no haters here)
-# into an awesome development machine.
+fancy_echo() {
+  local fmt="$1"; shift
 
-# shellcheck disable=SC3043
+  # shellcheck disable=SC2059
+  printf "\\n$fmt\\n" "$@"
+}
 
+append_to_zshrc() {
+  local text="$1" zshrc
+  local skip_new_line="${2:-0}"
+
+  if [ -w "$HOME/.zshrc.local" ]; then
+    zshrc="$HOME/.zshrc.local"
+  else
+    zshrc="$HOME/.zshrc"
+  fi
+
+  if ! grep -Fqs "$text" "$zshrc"; then
+    if [ "$skip_new_line" -eq 1 ]; then
+      printf "%s\\n" "$text" >> "$zshrc"
+    else
+      printf "\\n%s\\n" "$text" >> "$zshrc"
+    fi
+  fi
+}
+
+# shellcheck disable=SC2154
+trap 'ret=$?; test $ret -ne 0 && printf "failed\n\n" >&2; exit $ret' EXIT
+
+set -e
 
 
 if [ ! -d "$HOME/.bin/" ]; then
@@ -15,6 +39,9 @@ fi
 if [ ! -f "$HOME/.zshrc" ]; then
   touch "$HOME/.zshrc"
 fi
+
+# shellcheck disable=SC2016
+append_to_zshrc 'export PATH="$HOME/.bin:$PATH"'
 
 
 # Determine Homebrew prefix
@@ -26,12 +53,12 @@ else
 fi
 
 if ! command -v brew >/dev/null; then
-  echo "Installing Homebrew ..."
+  fancy_echo "Installing Homebrew ..."
     /bin/bash -c \
       "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/demo/.zprofile 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+    append_to_zshrc "eval \"\$($HOMEBREW_PREFIX/bin/brew shellenv)\""
+
     export PATH="$HOMEBREW_PREFIX/bin:$PATH"
 fi
 
@@ -63,6 +90,7 @@ brew install exa
 brew install hstr
 brew install htop
 brew install httpie
+brew install derailed/k9s/k9s
 
 
 # fancy_echo "Setting up Vim"
