@@ -96,8 +96,8 @@ brew install infrahq/tap/infra -q
 brew install --cask visual-studio-code -q
 brew install derailed/k9s/k9s -q
 brew install --cask hpedrorodrigues/tools/dockutil -q
-kubectl krew install access-matrix -q
-kubectl krew install ctx -q
+kubectl krew install access-matrix 
+kubectl krew install ctx 
 
 brew tap homebrew/cask-fonts
 brew install font-inconsolata -q
