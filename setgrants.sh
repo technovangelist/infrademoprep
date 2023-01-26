@@ -8,7 +8,7 @@ fi
 echo Setting the Connection Names
 source ./config-hostnames.sh
 
-ALLADMINS=("matt.williams" "jeff" "michael" "michael.yang" "daniel.nephin" "bruce.macdonald" "patrick.divine" "eva.ho")
+ALLADMINS=("matt.williams" "jeff" "michael" "michael.yang" "daniel.nephin" "bruce.macdonald" "patrick.divine" "eva.ho" "demo")
 
 for user in "${ALLADMINS[@]}"
 do

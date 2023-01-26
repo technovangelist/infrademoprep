@@ -115,14 +115,6 @@ if [ ! -f VMware.dmg ]; then
     wget https://www.dropbox.com/s/e6r7awhvai3nexx/VMware-Fusion-e.x.p-20486664_universal.dmg?dl=1 -O VMware.dmg
 fi
 
-if [ ! -d "/Users/demo/demoprep/saas" ]; then
-  git clone https://github.com/infrahq/ConferenceDemos.git ~/demoprep/saas
-else
-  cd /Users/demo/demoprep/saas
-  git pull
-  cd /Users/demo
-fi
-
 if [ ! -d "/Users/demo/demoprep/client" ]; then
   git clone https://github.com/technovangelist/infrademoprep.git ~/demoprep/client
 else
