@@ -117,11 +117,17 @@ fi
 
 if [ ! -d "/Users/demo/demoprep/client" ]; then
   git clone https://github.com/technovangelist/infrademoprep.git ~/demoprep/client
+  cp ~/demoprep/client/*.sh ~/.bin
 else
   cd /Users/demo/demoprep/client
   git pull
+  cp ~/demoprep/client/*.sh ~/.bin
   cd /Users/demo
 fi
+
+append_to_zshrc fpath+=~/demoprep/client/zshfuncs
+append_to_zshrc autoload -U ~/demoprep/client/zshfuncs/*(.:t)
+
 
 
 CURRENTDOCK="$(dockutil -L | cut -f1)"
