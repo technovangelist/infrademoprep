@@ -115,15 +115,12 @@ if [ ! -f VMware.dmg ]; then
     wget https://www.dropbox.com/s/e6r7awhvai3nexx/VMware-Fusion-e.x.p-20486664_universal.dmg?dl=1 -O VMware.dmg
 fi
 
-if [ ! -d "/Users/demo/demoprep/client" ]; then
-  git clone https://github.com/technovangelist/infrademoprep.git ~/demoprep/client
-  cp ~/demoprep/client/*.sh ~/.bin
-else
-  cd /Users/demo/demoprep/client
-  git pull
-  cp ~/demoprep/client/*.sh ~/.bin
-  cd /Users/demo
+if [ -d "/Users/demo/demoprep/client" ]; then
+  rm -rf /Users/demo/demoprep/client
 fi
+  
+git clone https://github.com/technovangelist/infrademoprep.git ~/demoprep/client
+cp ~/demoprep/client/*.sh ~/.bin
 
 append_to_zshrc 'fpath=( /Users/demo/demoprep/client/zshfuncs "${fpath[@]}" )'
 append_to_zshrc 'autoload -Uz $fpath[1]/*(.:t)'
