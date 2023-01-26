@@ -125,8 +125,8 @@ else
   cd /Users/demo
 fi
 
-append_to_zshrc fpath+=~/demoprep/client/zshfuncs
-append_to_zshrc 'autoload -U ~/demoprep/client/zshfuncs/*'
+append_to_zshrc 'fpath=( /Users/demo/demoprep/client/zshfuncs "${fpath[@]}" )'
+append_to_zshrc 'autoload -Uz $fpath[1]/*(.:t)'
 
 
 
