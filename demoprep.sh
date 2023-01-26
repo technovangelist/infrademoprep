@@ -104,6 +104,8 @@ brew tap homebrew/cask-fonts
 brew install font-inconsolata 
 brew install font-jetbrains-mono-nerd-font 
 
+brew upgrade
+
 fancy_echo "Setting up Vim"
 brew install neovim 
 rm -rf ~/.config/nvim
