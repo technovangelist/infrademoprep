@@ -100,11 +100,11 @@ kubectl krew install access-matrix
 kubectl krew install ctx 
 
 brew tap homebrew/cask-fonts
-brew install font-inconsolata -q
-brew install font-jetbrains-mono-nerd-font -q
+brew install font-inconsolata 
+brew install font-jetbrains-mono-nerd-font 
 
 fancy_echo "Setting up Vim"
-brew install neovim -q
+brew install neovim 
 rm -rf ~/.config/nvim
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 
