@@ -110,20 +110,53 @@ git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 
 wget https://www.dropbox.com/s/e6r7awhvai3nexx/VMware-Fusion-e.x.p-20486664_universal.dmg?dl=1 -O VMware.dmg
 
-dockutil --remove 'Launchpad'
-dockutil --remove 'Messages'
-dockutil --remove 'Mail'
-dockutil --remove 'FaceTime'
-dockutil --remove 'Contacts'
-dockutil --remove 'Reminders'
-dockutil --remove 'TV'
-dockutil --remove 'Music'
-dockutil --remove 'Podcasts'
-dockutil --remove 'News'
-dockutil --remove 'Keynote'
-dockutil --remove 'Pages'
-dockutil --remove 'App Store'
-dockutil --remove 'Terminal'
+CURRENTDOCK="$(dockutil -L | cut -f1)"
+
+case $CURRENTDOCK in
+  *Launchpad*)
+    dockutil --remove 'Launchpad'
+  ;;
+
+  *Messages*)
+    dockutil --remove 'Messages'
+  ;;
+  *Mail*)
+    dockutil --remove 'Mail'
+  ;;
+  *FaceTime*)
+    dockutil --remove 'FaceTime'
+  ;;
+  *Contacts*)
+    dockutil --remove 'Contacts'
+  ;;
+  *Reminders*)
+    dockutil --remove 'Reminders'
+  ;;
+  *TV*)
+    dockutil --remove 'TV'
+  ;;
+  *Music*)
+    dockutil --remove 'Music'
+  ;;
+  *Podcasts*)
+    dockutil --remove 'Podcasts'
+  ;;
+  *News*)
+    dockutil --remove 'News'
+  ;;
+  *Keynote*)
+    dockutil --remove 'Keynote'
+  ;;
+  *Pages*)
+    dockutil --remove 'Pages'
+  ;;
+  *"App Store"*)
+    dockutil --remove 'App Store'
+  ;;
+  *Terminal*)
+    dockutil --remove 'Terminal'
+  ;;
+esac
 
 
 
