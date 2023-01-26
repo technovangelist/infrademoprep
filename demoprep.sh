@@ -99,7 +99,7 @@ brew install --cask hpedrorodrigues/tools/dockutil -q
 kubectl krew install access-matrix -q
 kubectl krew install ctx -q
 
-brew tap homebrew/cask-fonts -q
+brew tap homebrew/cask-fonts
 brew install font-inconsolata -q
 brew install font-jetbrains-mono-nerd-font -q
 
