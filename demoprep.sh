@@ -92,6 +92,9 @@ brew install htop
 brew install httpie
 brew install kubernetes-cli
 brew install krew
+brew install infrahq/tap/infra
+brew install --cask vmware-fusion
+brew install --cask visual-studio-code
 brew install derailed/k9s/k9s
 kubectl krew install access-matrix
 kubectl krew install ctx
