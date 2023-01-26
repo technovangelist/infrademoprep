@@ -90,14 +90,18 @@ brew install exa
 brew install hstr
 brew install htop
 brew install httpie
+brew install kubernetes-cli
+brew install krew
 brew install derailed/k9s/k9s
+kubectl krew install access-matrix
+kubectl krew install ctx
 
+brew tap homebrew/cask-fonts
+brew install font-inconsolata
+brew install font-jetbrains-mono-nerd-font
 
-# fancy_echo "Setting up Vim"
-curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos.tar.gz
-tar xzf nvim-macos.tar.gz
-./nvim-macos/bin/nvim
-
+fancy_echo "Setting up Vim"
+brew install neovim
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 nvim
 
