@@ -136,7 +136,7 @@ append_to_zshrc 'autoload -Uz $fpath[1]/*(.:t)'
 append_to_zshrc 'eval "$(starship init zsh)"'
 append_to_zshrc 'alias la="ls -la"'
 append_to_zshrc 'source /opt/homebrew/share/zsh-abbr/zsh-abbr.zsh'
-append_to_zshrc 'abbr utils-civo=212.2.242.91'
+append_to_zshrc 'abbr -g sshutils="ssh 212.2.242.91"'
 
 CURRENTDOCK="$(dockutil -L | cut -f1)"
 
