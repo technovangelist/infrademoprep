@@ -93,6 +93,7 @@ brew install --cask google-chrome -q
 brew install --cask httpie -q
 brew install kubernetes-cli -q
 brew install krew -q
+brew install olets/tap/zsh-abbr -q
 brew install infrahq/tap/infra -q
 brew install --cask visual-studio-code -q
 brew install derailed/k9s/k9s -q
@@ -134,6 +135,8 @@ append_to_zshrc 'fpath=( /Users/demo/demoprep/client/zshfuncs "${fpath[@]}" )'
 append_to_zshrc 'autoload -Uz $fpath[1]/*(.:t)'
 append_to_zshrc 'eval "$(starship init zsh)"'
 append_to_zshrc 'alias la="ls -la"'
+append_to_zshrc 'source /opt/homebrew/share/zsh-abbr/zsh-abbr.zsh'
+append_to_zshrc 'abbr utils-civo=212.2.242.91'
 
 CURRENTDOCK="$(dockutil -L | cut -f1)"
 

@@ -13,5 +13,5 @@
 # @raycast.author Matt Williams
 # @raycast.authorURL https://github.com/technovangelist
 
-open -a /Applications/imageviewer5 /Users/demo/demoprep/client/pics/1.NewCluster-1.png
+open -a /Applications/imageviewer5.app /Users/demo/demoprep/client/pics/1.NewCluster-1.png
 
