@@ -97,6 +97,7 @@ brew install infrahq/tap/infra -q
 brew install --cask visual-studio-code -q
 brew install derailed/k9s/k9s -q
 brew install --cask raycast -q
+brew install starship -q
 brew install --cask hpedrorodrigues/tools/dockutil -q
 brew tap charmbracelet/tap && brew install charmbracelet/tap/skate -q
 kubectl krew install access-matrix 
@@ -129,8 +130,8 @@ cp ~/demoprep/client/*.sh ~/.bin
 
 append_to_zshrc 'fpath=( /Users/demo/demoprep/client/zshfuncs "${fpath[@]}" )'
 append_to_zshrc 'autoload -Uz $fpath[1]/*(.:t)'
-
-
+append_to_zshrc 'eval "$(starship init zsh)"'
+append_to_zshrc 'alias la="ls -la"'
 
 CURRENTDOCK="$(dockutil -L | cut -f1)"
 
@@ -344,5 +345,4 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
-open VMware.dmg
 killall Finder
