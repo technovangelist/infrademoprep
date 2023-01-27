@@ -244,7 +244,7 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 #"Use column view in all Finder windows by default"
-defaults write com.apple.finder FXPreferredViewStyle Nlsv
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
 #"Avoiding the creation of .DS_Store files on network volumes"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
