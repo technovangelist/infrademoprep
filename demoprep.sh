@@ -128,6 +128,8 @@ fi
 git clone https://github.com/technovangelist/infrademoprep.git ~/demoprep/client
 cp ~/demoprep/client/*.sh ~/.bin
 
+mv ~/demoprep/client/config/starship.toml ~/.config/starship.toml
+
 append_to_zshrc 'fpath=( /Users/demo/demoprep/client/zshfuncs "${fpath[@]}" )'
 append_to_zshrc 'autoload -Uz $fpath[1]/*(.:t)'
 append_to_zshrc 'eval "$(starship init zsh)"'
