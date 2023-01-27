@@ -113,9 +113,6 @@ brew install neovim -q
 rm -rf ~/.config/nvim
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 
-if [ ! -f VMware.dmg ]; then
-    wget https://www.dropbox.com/s/e6r7awhvai3nexx/VMware-Fusion-e.x.p-20486664_universal.dmg?dl=1 -O VMware.dmg
-fi
 
 if [ ! -f /Applications/imageviewer5.app ]; then
   wget https://github.com/lambdan/imageviewer5/releases/download/1.6.1/imageviewer5.app.zip
