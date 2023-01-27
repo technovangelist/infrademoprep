@@ -95,19 +95,20 @@ brew install krew -q
 brew install infrahq/tap/infra -q
 brew install --cask visual-studio-code -q
 brew install derailed/k9s/k9s -q
+brew install --cask raycast -q
 brew install --cask hpedrorodrigues/tools/dockutil -q
 brew tap charmbracelet/tap && brew install charmbracelet/tap/skate -q
 kubectl krew install access-matrix 
 kubectl krew install ctx 
 
-brew tap homebrew/cask-fonts
-brew install font-inconsolata 
-brew install font-jetbrains-mono-nerd-font 
+brew tap homebrew/cask-fonts -q
+brew install font-inconsolata -q
+brew install font-jetbrains-mono-nerd-font -q
 
 brew upgrade
 
 fancy_echo "Setting up Vim"
-brew install neovim 
+brew install neovim -q
 rm -rf ~/.config/nvim
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 
