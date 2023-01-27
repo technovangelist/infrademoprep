@@ -89,6 +89,7 @@ brew install alfred -q
 brew install exa -q
 brew install hstr -q
 brew install htop -q
+brew install --cask google-chrome -q
 brew install --cask httpie -q
 brew install kubernetes-cli -q
 brew install krew -q
