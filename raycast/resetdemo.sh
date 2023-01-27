@@ -2,16 +2,18 @@
 
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title pics
-# @raycast.mode silent
+# @raycast.title Reset Infra Demo
+# @raycast.mode fullOutput
 
 # Optional parameters:
 # @raycast.icon 🤖
-# @raycast.packageName Launch Demo Pics
 
 # Documentation:
 # @raycast.author Matt Williams
 # @raycast.authorURL https://github.com/technovangelist
 
-open -a /Applications/imageviewer5.app /Users/demo/demoprep/client/pics/0.clusterroleannotation.png
+cat /Users/demo/demoprep/client/resetdemo.sh
+
+source /Users/demo/demoprep/client/resetdemo.sh
+
 

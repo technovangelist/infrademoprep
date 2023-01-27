@@ -21,3 +21,5 @@ done
 
 infra grants add -g Admin $DO_K8S_NAME --role cluster-admin
 infra grants add -g Admin $CIVO_K8S_NAME --role cluster-admin
+infra grants add -g Developers $DO_K8S_NAME --role exec
+infra grants add -g Developers $CIVO_K8S_NAME --role exec

@@ -1,3 +1,3 @@
 function pics() {
-  open -a /Applications/ImageViewer5.app /Users/demo/demoprep/client/pics/1.NewCluster-1.png
+  open -a /Applications/ImageViewer5.app /Users/demo/demoprep/client/pics/0.clusterroleannotation.png
 }
