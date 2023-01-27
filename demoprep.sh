@@ -114,7 +114,7 @@ rm -rf ~/.config/nvim
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 
 
-if [ ! -f /Applications/imageviewer5.app ]; then
+if [ ! -d /Applications/imageviewer5.app ]; then
   wget https://github.com/lambdan/imageviewer5/releases/download/1.6.1/imageviewer5.app.zip
   unzip imageviewer5.app.zip 
   mv imageviewer5.app /Applications
