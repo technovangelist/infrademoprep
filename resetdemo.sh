@@ -7,5 +7,8 @@ infra grants remove richard@infrahq.com $DO_SSH_HOSTNAME
 infra grants remove richard@infrahq.com $CIVO_K8S_NAME
 infra grants remove richard@infrahq.com $DO_K8S_NAME
 infra groups removeuser richard@infrahq.com Developers
+infra grants add -g Developers $CIVO_K8S_NAME edit
+infra grants add -g Developers $DO_K8S_NAME edit
 
 ssh richard@rocky rm /home/richard/.kube/config
+scp /Users/demo/demoprep/client/nginx.yaml richard@rocky:/home/richard
