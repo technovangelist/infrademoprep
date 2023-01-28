@@ -101,8 +101,12 @@ brew install --cask raycast -q
 brew install starship -q
 brew install --cask hpedrorodrigues/tools/dockutil -q
 brew tap charmbracelet/tap && brew install charmbracelet/tap/skate -q
-kubectl krew install access-matrix 
-kubectl krew install ctx 
+if [[ ! $(kubectl krew list | grep -c access-matrix) == 1 ]]; then
+  kubectl krew install access-matrix 
+fi
+if [[ ! $(kubectl krew list | grep -c ^ctx) == 1 ]]; then
+  kubectl krew install ctx 
+fi
 
 brew tap homebrew/cask-fonts -q
 brew install font-inconsolata -q
