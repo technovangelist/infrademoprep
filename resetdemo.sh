@@ -18,8 +18,10 @@ infra grants add -g Developers $CIVO_K8S_NAME --role edit
 infra grants add -g Developers $DO_K8S_NAME --role edit
 
 echo Clean up Richards VM
-ssh richard@rocky rm /home/richard/.kube/config
+# ssh richard@rocky rm /home/richard/.kube/config
 scp /Users/demo/demoprep/client/nginx.yaml richard@rocky:/home/richard
+
+ssh richard@rocky infra logout
 
 echo Reset Complete
 
