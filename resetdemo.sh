@@ -1,4 +1,6 @@
 #! /usr/bin/env bash
+cat /Users/demo/demoprep/client/resetdemo.sh
+
 echo Setting the Connection Names
 source /Users/demo/.bin/config-hostnames.sh
 
