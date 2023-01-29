@@ -126,12 +126,13 @@ if [ ! -d /Applications/imageviewer5.app ]; then
   mv imageviewer5.app /Applications
 fi
 
-if [ -d "/Users/demo/demoprep/client" ]; then
-  rm -rf /Users/demo/demoprep/client
+if [ -d "/Users/demo/demoprep" ]; then
+  rm -rf /Users/demo/demoprep
 fi
   
 git clone https://github.com/technovangelist/infrademoprep.git ~/demoprep/client
 cp ~/demoprep/client/*.sh ~/.bin
+mv ~/demoprep/client/selfhosting ~/demoprep/selfhosting
 
 mv ~/demoprep/client/config/starship.toml ~/.config/starship.toml
 
