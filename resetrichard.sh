@@ -1,5 +1,5 @@
 #! /usr/bin/env bash
-cat /Users/demo/demoprep/client/resetdemo.sh
+cat /Users/demo/demoprep/client/resetrichard.sh
 
 echo Configuring the Connection Names
 source /Users/demo/.bin/config-hostnames.sh
