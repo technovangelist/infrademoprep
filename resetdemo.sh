@@ -20,7 +20,7 @@ infra grants add -g Developers $DO_K8S_NAME --role edit
 echo Clean up Richards VM
 # ssh richard@rocky rm /home/richard/.kube/config
 scp /Users/demo/demoprep/client/nginx.yaml richard@rocky:/home/richard
-
+ssh richard@rocky kubectl remove -f /home/richard/nginx.yaml
 ssh richard@rocky infra logout
 
 echo Reset Complete
