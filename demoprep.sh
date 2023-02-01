@@ -1,4 +1,6 @@
 #! /usr/bin/env bash
+cd ~
+rm .bin/resetdemo.sh
 
 fancy_echo() {
   local fmt="$1"; shift

@@ -24,6 +24,7 @@ scp /Users/demo/demoprep/client/nginx-rachel.yaml rachel@rocky:/home/rachel
 ssh richard@rocky kubectl delete -f /home/richard/nginx-rachel.yaml
 ssh rachel@rocky infra logout
 
+
 echo Reset Complete
 
 # End of the script
